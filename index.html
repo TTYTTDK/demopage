@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  
+  <!-- D3 js -->
+  <script src="https://d3js.org/d3.v6.min.js"></script> 
+  
+  <title>BDSE19-G1</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              原物料相關股票預測分析
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how.html">How</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="oil.html">Oil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="iron.html">Iron</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ship.html">Ship</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="result.html">Result</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="100000">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 ">
+                  <div class="detail-box">
+                    <h1>
+                      石油/塑化類<br>
+                      股票
+                    </h1>
+                    <h5>
+                      挑選 2021Q2 日均成交額(百萬) 前十名的股票: 中石化(1314)、台塑(1301)、台聚(1304)、南亞(1303)、國喬(1312)、聯成(1313)、亞聚(1308)、華夏(1305)、台化(1326)、台達化(1309)
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-7">
+                  <div class="img-box col-lg-10 mx-auto px-0" id="oilpiefig">
+                    <!-- <img src="images/slider-img.png" alt=""> -->
+                    <script src="./js/stockpie.js"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="100000">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 ">
+                  <div class="detail-box">
+                    <h1>
+                      鋼鐵/不鏽鋼類<br>
+                      股票
+                    </h1>
+                    <h5>
+                      挑選 2021Q2 日均成交額(百萬) 前十名的股票: 中鋼(2002)、中鴻(2014)、大成鋼(2027)、新光鋼(2031)、燁輝(2023)、海光(2038)、東和鋼鐵(2006)、春源(2010)、威致(2028)、彰源(2030)
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-7">
+                  <div class="img-box col-lg-10 mx-auto px-0">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item"  data-bs-interval="100000">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-5 col-lg-5 ">
+                  <div class="detail-box">
+                    <h1>
+                      航運/散裝航運類<br>
+                      股票
+                    </h1>
+                    <h5>
+                      挑選 2021Q2 日均成交額(百萬) 前十名股票: 長榮(2603)、陽明(2609)、萬海(2615)、慧洋-KY(2637)、裕民(2606)、四維航(5608)、新興(2605)、台航(2617)、台驊投控(2636)、中菲行(5609)
+                    </h5>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-7">
+                  <div class="img-box col-lg-10 mx-auto px-0">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- how section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box col-lg-10 mx-auto px-0">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                運用 Pytorch 架構 <br> 
+                LSTM & GRU 模型來預測股價
+              </h2>
+            </div>
+              <h5>
+                利用近 10 年每日開盤價、收盤價、最低價、最高價、成交量 5 種特徵值搭配其他特徵值來預測 2021 前半年股價，搭配的其他特徵值如下 5 種搭配方式：
+              </h5>
+            <div>
+              <ul style="font-size: 18px;">
+                <li>F5+TI189：基本開收低高量 + 技術指標189個</li>
+                <li>F5+XGBTI15：基本開收低高量 + XGBoost篩選技術指標前15名</li>
+                <li>F5+Futures：基本開收低高量 + 各類股對應的期貨報價</li>
+                <li>F5+Category：基本開收低高量 + 各類股的收盤價</li>
+                <li>F5+Nothing：基本開收低高量</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end how section -->
+
+  <!-- oil section -->
+  <section class="stock_title_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h2>
+              石油/塑化類股 2021 前半年股價預測分析
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box col-lg-10 mx-auto px-0">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                待放石油/塑化趨勢圖<br> 
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_oil_name">
+              <option value="0">台塑(1301)</option>
+              <option value="1">南亞(1303)</option>
+              <option value="2">台聚(1304)</option>
+              <option value="3">華夏(1305)</option>
+              <option value="4">亞聚(1308)</option>
+              <option value="5">台達化(1309)</option>
+              <option value="6">國喬(1312)</option>
+              <option value="7">聯成(1313)</option>
+              <option value="8">中石化(1314)</option>
+              <option value="9">台化(1326)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end oil section -->
+
+  <!-- iron section -->
+  <section class="stock_title_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h2>
+              鋼鐵/不鏽鋼類股 2021 前半年股價預測分析
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box col-lg-10 mx-auto px-0">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                待放鋼鐵/不鏽鋼趨勢圖<br> 
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_iron_name">
+              <option value="0">中鋼(2002)</option>
+              <option value="1">東和鋼鐵(2006)</option>
+              <option value="2">春源(2010)</option>
+              <option value="3">中鴻(2014)</option>
+              <option value="4">燁輝(2023)</option>
+              <option value="5">大成鋼(2027)</option>
+              <option value="6">威致(2028)</option>
+              <option value="7">彰源(2030)</option>
+              <option value="8">新光鋼(2031)</option>
+              <option value="9">海光(2038)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end iron section -->
+
+  <!-- ship section -->
+  <section class="stock_title_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h2>
+              航運/散裝航運類股 2021 前半年股價預測分析
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box col-lg-10 mx-auto px-0">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                待放航運/散裝航運趨勢圖<br> 
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_iron_name">
+              <option value="0">長榮(2603)</option>
+              <option value="1">新興(2605)</option>
+              <option value="2">裕民(2606)</option>
+              <option value="3">陽明(2609)</option>
+              <option value="4">萬海(2615)</option>
+              <option value="5">台航(2617)</option>
+              <option value="6">台驊投控(2636)</option>
+              <option value="7">慧洋-KY(2637)</option>
+              <option value="8">四維航(5608)</option>
+              <option value="9">中菲行(5609)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end ship section -->
+
+    <!-- all rmse section -->
+    <section class="stock_title_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading_container">
+              <h2>
+                所有類股 RMSE 綜合比較 (RMSE越小模型越準確)
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about_section layout_padding2">
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="img-box col-lg-10 mx-auto px-0">
+              <img src="images/about-img.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  待放All RMSE圖<br> 
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="choose_section">
+      <div class="container">
+        <div class="row">
+          <div class="d-grid gap-2 d-md-block mx-auto">
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">LSTM</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">GRU</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">F5+TI189</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">F5+XGBTI15</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">F5+Futures</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">F5+Category</button>
+            <button class="btn btn-outline-dark btn-lg button_choose" type="button">F5+Nothing</button>
+          </div>
+          <!-- <div class="btn-group mx-auto" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >LSTM</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >GRU</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >F5+TI189</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >F5+XGBTI15</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >F5+Futures</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >F5+Category</button>
+            <button type="button" class="btn btn-outline-dark btn-lg button_choose" >F5+Nothing</button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- end all rmse section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+
+</body>
+
+</html>
