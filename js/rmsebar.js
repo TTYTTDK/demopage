@@ -14,7 +14,7 @@ const svg = d3.select("#rmsebar")
               .attr("transform",`translate(${margin.left},${margin.top})`);
 
 // Parse the Data
-d3.csv("../data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
+d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
 
   // List of subgroups = header of the csv files = soil condition here
   const subgroups = data.columns.slice(1)
