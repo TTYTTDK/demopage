@@ -1,10 +1,11 @@
+{
 // set the dimensions and margins of the graph
-const margin = {top: 10, right: 10, bottom: 100, left: 50},
+var margin = {top: 10, right: 10, bottom: 100, left: 50},
       width = 1100 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg = d3.select("#rmsebar")
+var svg = d3.select("#rmsebar")
               .append("svg")
               .attr("preserveAspectRatio", "xMidYMid meet")
               .attr("viewBox", "0 0 1100 600")
@@ -14,7 +15,7 @@ const svg = d3.select("#rmsebar")
               .attr("transform",`translate(${margin.left},${margin.top})`);
 
 // tooltip setup 
-const tooltip = d3.select('#rmsebar')
+var tooltip = d3.select('#rmsebar')
                 .append('div')
                 .style('position', 'absolute')
                 .style('z-index', '10')
@@ -206,4 +207,4 @@ d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
 
   }
 })
-
+}

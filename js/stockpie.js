@@ -1,3 +1,4 @@
+{
 var margin = {top: 20, right: 20, bottom: 20, left: 20},
       width = 500 - margin.left - margin.right,
       height = 500 - margin.top - margin.bottom;
@@ -50,4 +51,5 @@ p_chart.append("path")
 // p_chart.append("text")
 //       .text(function(d){ return d.data.language})
 //       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")";  }) 
-//       .style("text-anchor", "middle") 
+//       .style("text-anchor", "middle")
+} 
