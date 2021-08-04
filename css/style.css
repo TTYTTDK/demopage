@@ -133,6 +133,7 @@ a:focus {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

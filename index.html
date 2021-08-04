@@ -399,7 +399,10 @@
     <section class="about_section layout_padding2">
       <div class="container  ">
         <div class="row">
-          <div class="col-md-6 ">
+          <div class="col-md-12" id="rmsebar">
+            <script src="./js/allrmsebarinteravtive.js"></script>
+          </div>
+          <!-- <div class="col-md-6 ">
             <div class="img-box col-lg-10 mx-auto px-0">
               <img src="images/about-img.png" alt="">
             </div>
@@ -412,44 +415,71 @@
                 </h2>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
     <section class="choose_section">
-      <div class="container">
+      <div class="container rmsefivekind">
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" name="F5_TI189" checked>
-            <label for="F5_TI189">F5_TI189</label>
+          <div class="col-md-1">
+            <h4 style="font-weight: bold;">
+              LSTM:
+            </h4>
           </div>
           <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" name="F5_XGBTI15">
-            <label for="F5_XGBTI15">F5_XGBTI15</label>
+            <input type="checkbox" id="LSTM_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="LSTM_F5_TI189">F5_TI189</label>
           </div>
           <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" name="F5_Futures">
-            <label for="F5_Futures">F5_Futures</label>
+            <input type="checkbox" id="LSTM_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="LSTM_F5_XGBTI15">F5_XGBTI15</label>
           </div>
           <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" name="F5_Category">
-            <label for="F5_Category">F5_Category</label>
+            <input type="checkbox" id="LSTM_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="LSTM_F5_Futures">F5_Futures</label>
           </div>
           <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" name="F5_Nothing">
-            <label for="F5_Nothing">F5_Nothing</label>
+            <input type="checkbox" id="LSTM_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="LSTM_F5_Category">F5_Category</label>
           </div>
-          <div class="col-md-1"></div>
-          <!-- <div class="d-grid gap-2 d-md-block mx-auto">
-            <button class="btn btn-outline-dark button_choose" type="button">LSTM</button>
-            <button class="btn btn-outline-dark button_choose" type="button">GRU</button>
-            <button class="btn btn-outline-dark button_choose" type="button">F5+TI189</button>
-            <button class="btn btn-outline-dark button_choose" type="button">F5+XGBTI15</button>
-            <button class="btn btn-outline-dark button_choose" type="button">F5+Futures</button>
-            <button class="btn btn-outline-dark button_choose" type="button">F5+Category</button>
-            <button class="btn btn-outline-dark button_choose" type="button">F5+Nothing</button>
-          </div> -->
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="LSTM_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="LSTM_F5_Nothing">F5_Nothing</label>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
+            <h4 style="font-weight: bold;">
+              GRU:
+            </h4>
+          </div>
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="GRU_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="GRU_F5_TI189">F5_TI189</label>
+          </div>
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="GRU_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="GRU_F5_XGBTI15">F5_XGBTI15</label>
+          </div>
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="GRU_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="GRU_F5_Futures">F5_Futures</label>
+          </div>
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="GRU_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="GRU_F5_Category">F5_Category</label>
+          </div>
+          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="GRU_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
+            <label for="GRU_F5_Nothing">F5_Nothing</label>
+          </div>
+          <div class="col-md-1" style="font-size: larger; font-weight: bold;">
+            <input type="checkbox" id="checkall" style="width:16px; height:16px;">
+            <label for="checkall">ALL</label>
+          </div>
         </div>
       </div>
     </section>
