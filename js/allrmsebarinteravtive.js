@@ -27,17 +27,20 @@ var tooltip = d3.select('#rmsebar')
                 .text('a simple tooltip');
 
 // Parse the Data
-d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
+d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
 
   // arrange the data to ardata
   let ardata = []
   for(let i = 0; i < data.length; i++) {
+
+    console.log(round2(data[i].LSTM_F5_TI189))
+
     ardata.push({
       "name": data[i].name,
-      "rmse": [data[i].LSTM_F5_TI189, data[i].LSTM_F5_XGBTI15, data[i].LSTM_F5_Futures, 
-                data[i].LSTM_F5_Category, data[i].LSTM_F5_Nothing,  
-                data[i].GRU_F5_TI189, data[i].GRU_F5_XGBTI15, data[i].GRU_F5_Futures, 
-                data[i].GRU_F5_Category, data[i].GRU_F5_Nothing]
+      "rmse": [round2(data[i].LSTM_F5_TI189), round2(data[i].LSTM_F5_XGBTI15), round2(data[i].LSTM_F5_Futures), 
+                round2(data[i].LSTM_F5_Category), round2(data[i].LSTM_F5_Nothing),  
+                round2(data[i].GRU_F5_TI189), round2(data[i].GRU_F5_XGBTI15), round2(data[i].GRU_F5_Futures), 
+                round2(data[i].GRU_F5_Category), round2(data[i].GRU_F5_Nothing)]
     })
   }
 
@@ -122,9 +125,17 @@ d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
-        .selectAll("text")
-        .style("font-size","14px")
-        .style("font-weight", "bold");    
+        .style("font-size","16px")
+        .style("font-weight", "bold")
+        .append("g")
+        .append("text")
+        .attr("transform", "rotate(-270)")
+        .attr("y", -40)
+        // .attr('text-anchor','end')
+        .attr("x", 50)
+        .attr("dy", "1.5em")
+        .attr("fill", "#000")
+        .text("RMSE");  
   }
 
   function updateGraph(selectedIds) {
@@ -155,9 +166,17 @@ d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
 
     svg.selectAll('.axis.y')
         .call(yAxis)
-        .selectAll("text")
-        .style("font-size","14px")
-        .style("font-weight", "bold");
+        .style("font-size","16px")
+        .style("font-weight", "bold")
+        .append("g")
+        .append("text")
+        .attr("transform", "rotate(-270)")
+        .attr("y", -40)
+        // .attr('text-anchor','end')
+        .attr("x", 50)
+        .attr("dy", "1.5em")
+        .attr("fill", "#000")
+        .text("RMSE");
 
     let name = svg.selectAll(".name")
                   .data(rmsedata);
@@ -187,8 +206,8 @@ d3.csv("data/All_Metrics_Score_rmse_flat_table.csv").then( function(data) {
         .on('mousemove', function (e) {
           tooltip
 
-            .style('top', e.pageY - 200 + 'px')
-            .style('left', e.pageX - 100  + 'px');
+            .style('top', e.clientY - 200 + 'px')
+            .style('left', e.clientX - 200  + 'px');
         })
         .on('mouseout', function (e) {
           tooltip.html(``).style('visibility', 'hidden');

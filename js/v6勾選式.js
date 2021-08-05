@@ -1,11 +1,18 @@
+{
 // 選單
-let boxLSTM = d3.select("#line_box").append('div').attr("id","LSTM")//.style("display","inline").style("width","100%");
+let boxLSTM = d3.select("#line_box").append('div').attr("id","LSTM")
+                .style("font-size", "20px").style("font-weight", "bold").append("br")
+
+//.style("display","inline").style("width","100%");
 //d3.select("#line_box").append("br")
-let boxGRU = d3.select("#line_box").append('div').attr("id","GRU")//.style("display","inline").style("width","100%");
+
+let boxGRU = d3.select("#line_box").append('div').attr("id","GRU")
+                .style("font-size", "20px").style("font-weight", "bold").append("br")
+//.style("display","inline").style("width","100%");
 
 // start chart
-const svgSize = {width: 550, height: 420};
-const margin = {top: 20, right: 80, bottom: 40, left:50};
+const svgSize = {width: 820, height: 550};
+const margin = {top: 30, right: 160, bottom: 30, left:40};
 var width = svgSize.width - margin.left - margin.right,
     height = svgSize.height - margin.top - margin.bottom;
 
@@ -46,13 +53,13 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
     // define x axis scale
 
     var x = d3.scaleTime()
-              .range([0, width])
-              .domain(d3.extent(data, d => d.date));
+                .range([0, width])
+                .domain(d3.extent(data, d => d.date));
 
     // define y axis scale
     var y = d3.scaleLinear()
-              .range([height, 0])
-              .domain([
+                .range([height, 0])
+                .domain([
                     d3.min(stocks, c => d3.min(c.values, d => d.price)),
                     d3.max(stocks, c => d3.max(c.values, d => d.price))
                 ]);
@@ -68,6 +75,8 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
         .attr("class", "axis axis-x")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x).ticks(12)) //改日期呈現方式
+        .style("font-size","16px")
+        .style("font-weight", "bold")
         .append("text")
         //.attr("transform", "rotate(-90)")
         .attr("y", 0)
@@ -81,15 +90,17 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
     g.append("g")
         .attr("class", "axis axis-y")
         .call(d3.axisLeft(y))
+        .style("font-size","16px")
+        .style("font-weight", "bold")
+        .append("g")
         .append("text")
-        //.attr("transform", "rotate(-90)")
-        .attr("y", -20)
-        //.attr('text-anchor','end')
-        //.attr("x", -65)
+        .attr("transform", "rotate(-270)")
+        .attr("y", -40)
+        // .attr('text-anchor','end')
+        .attr("x", 70)
         .attr("dy", "1.5em")
         .attr("fill", "#000")
         .text("Price ($)")
-        .style("font-weight","bold"); //字體加粗
 
     // append chart name
     g.append("g")
@@ -98,7 +109,7 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
         .attr('x',width/2-30)
         .attr('y','-10')
         .style("font-weight","bold") //字體加粗
-        .style('font-size','14px');
+        .style('font-size','20px');
 
     // append stock data to svg
     let stock = g.selectAll(".stock")
@@ -114,9 +125,9 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
         .attr("class", "line")
         .attr("id", d => `line-${d.id}`)
         .attr("d", d => line(d.values))
-        .style("stroke", (d,i) => i==0 ? d="#AAAAAA" : d=z(d.id))
+        .style("stroke", (d,i) => i==0 ? d="#000000" : d=z(d.id))
         .style("fill", "none")
-        .style("stroke-width", "1.5px")
+        .style("stroke-width", "2px")
         //.style("stroke-linejoin", "round")
         //.style("stroke-linecap", "round")
         .attr("opacity", (d,i) => i==0 ? d=1 : d=0);
@@ -129,7 +140,8 @@ d3.csv("data/Line_Chart_Data/data_折線/1301.TW.csv",type).then( data => {
         .attr("x", 3)
         .attr('id', d => `text-${d.id}`)
         //.attr("dy", "0.15em")
-        .style("font", "11px sans-serif")
+        .style("font", "16px sans-serif")
+        .style("font-weight", "bold")
         .attr("opacity", (d,i) => i==0 ? d=1 : d=0)
         .text(d => d.id);
         
@@ -207,4 +219,4 @@ function type(d, _, columns) {
     return d;
 }
 
-
+}

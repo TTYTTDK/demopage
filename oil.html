@@ -83,14 +83,14 @@
   </div>
 
 
-  <!-- oil section -->
+  <!-- oil checked-box line chart section -->
   <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
             <h5>
-              <b>石油/塑化類股 2021 前半年股價預測分析</b>
+              <b>石油/塑化類股 2021 前半年股價預測圖</b>
             </h5>
           </div>
         </div>
@@ -100,19 +100,59 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
+        <div class="col-md-9" id="line">
+        </div>
+        <div class="col-md-3" id="line_box">
+        </div>
+        <script src="./js/v6勾選式.js"></script>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_oil_name">
+              <option value="0">台塑(1301)</option>
+              <option value="1">南亞(1303)</option>
+              <option value="2">台聚(1304)</option>
+              <option value="3">華夏(1305)</option>
+              <option value="4">亞聚(1308)</option>
+              <option value="5">台達化(1309)</option>
+              <option value="6">國喬(1312)</option>
+              <option value="7">聯成(1313)</option>
+              <option value="8">中石化(1314)</option>
+              <option value="9">台化(1326)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end oil checked-box line chart section -->
+
+  <!-- oil bar and line interactiion chart start -->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>石油/塑化類股 RMSE值(越小越好) 與 股價預測分析圖</b>
+            </h5>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                待放石油/塑化趨勢圖<br> 
-              </h2>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="twochartOfbar">
+        </div>
+        <div class="col-md-6" id="twochartOfline">
+          <script src="./js/twochart.js"></script>
         </div>
       </div>
     </div>
@@ -139,7 +179,7 @@
       </div>
     </div>
   </section>
-  <!-- end oil section -->
+  <!-- end bar and line interactiion chart -->
 
   <!-- footer section -->
   <footer class="footer_section">

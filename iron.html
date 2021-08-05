@@ -83,14 +83,14 @@
   </div>
 
 
-  <!-- iron section -->
+  <!-- iron checked-box line chart section -->
   <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
             <h5>
-              <b>鋼鐵/不鏽鋼類股 2021 前半年股價預測分析</b>
+              <b>鋼鐵/不鏽鋼類股 2021 前半年股價預測圖</b>
             </h5>
           </div>
         </div>
@@ -100,19 +100,59 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
+        <div class="col-md-9" id="line">
+        </div>
+        <div class="col-md-3" id="line_box">
+        </div>
+        <script src="./js/v6勾選式.js"></script>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_iron_name">
+              <option value="0">中鋼(2002)</option>
+              <option value="1">東和鋼鐵(2006)</option>
+              <option value="2">春源(2010)</option>
+              <option value="3">中鴻(2014)</option>
+              <option value="4">燁輝(2023)</option>
+              <option value="5">大成鋼(2027)</option>
+              <option value="6">威致(2028)</option>
+              <option value="7">彰源(2030)</option>
+              <option value="8">新光鋼(2031)</option>
+              <option value="9">海光(2038)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end iron checked-box line chart section -->
+
+  <!-- iron bar and line interactiion chart start-->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>鋼鐵/不鏽鋼類股 RMSE值(越小越好) 與 股價預測分析圖</b>
+            </h5>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                待放鋼鐵/不鏽鋼趨勢圖<br> 
-              </h2>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="twochartOfbar">
+        </div>
+        <div class="col-md-6" id="twochartOfline">
+          <script src="./js/twochart.js"></script>
         </div>
       </div>
     </div>
@@ -139,7 +179,7 @@
       </div>
     </div>
   </section>
-  <!-- end iron section -->
+  <!-- end iron bar and line interactiion chart -->
 
   <!-- footer section -->
   <footer class="footer_section">

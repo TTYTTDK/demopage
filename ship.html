@@ -83,14 +83,14 @@
   </div>
 
 
-  <!-- ship section -->
+  <!-- ship checked-box line chart section -->
   <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
             <h5>
-              <b>航運/散裝航運類股 2021 前半年股價預測分析</b>
+              <b>航運/散裝航運類股 2021 前半年股價預測圖</b>
             </h5>
           </div>
         </div>
@@ -100,9 +100,9 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6" id="line">
+        <div class="col-md-9" id="line">
         </div>
-        <div class="col-md-6" id="line_box">
+        <div class="col-md-3" id="line_box">
         </div>
         <script src="./js/v6勾選式.js"></script>
       </div>
@@ -130,7 +130,56 @@
       </div>
     </div>
   </section>
-  <!-- end ship section -->
+  <!-- end ship checked-box line chart -->
+
+  <!-- ship bar and line interactiion chart start -->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>航運/散裝航運類股 RMSE值(越小越好) 與 股價預測分析圖 </b>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="twochartOfbar">
+        </div>
+        <div class="col-md-6" id="twochartOfline">
+          <script src="./js/twochart.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="stock_iron_name">
+              <option value="0">長榮(2603)</option>
+              <option value="1">新興(2605)</option>
+              <option value="2">裕民(2606)</option>
+              <option value="3">陽明(2609)</option>
+              <option value="4">萬海(2615)</option>
+              <option value="5">台航(2617)</option>
+              <option value="6">台驊投控(2636)</option>
+              <option value="7">慧洋-KY(2637)</option>
+              <option value="8">四維航(5608)</option>
+              <option value="9">中菲行(5609)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end ship bar and line interactiion chart -->
 
   <!-- footer section -->
   <footer class="footer_section">
