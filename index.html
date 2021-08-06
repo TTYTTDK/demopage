@@ -84,6 +84,10 @@
     </header>
     <!-- end header section -->
 
+
+<!-- *********************************************************************************************************************** -->
+
+
     <!-- slider section -->
     <section class="slider_section ">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
@@ -170,9 +174,14 @@
   </div>
 
 
+
+<!-- *********************************************************************************************************************** -->
+
+
+
   <!-- how section -->
 
-  <!-- <section class="about_section layout_padding">
+  <section class="about_section layout_padding"  style="padding: 50px 0 300px 0;">
     <div class="container  ">
       <div class="row">
         <div class="col-md-6 ">
@@ -204,19 +213,23 @@
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- end how section -->
 
+
+<!-- *********************************************************************************************************************** -->
+
+
   <!-- oil section -->
-  <!-- <section class="stock_title_section">
+  <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h2>
-              石油/塑化類股 2021 前半年股價預測分析
-            </h2>
+            <h5>
+              <b>石油/塑化類股 2021 前半年股價預測圖</b>
+            </h5>
           </div>
         </div>
       </div>
@@ -225,19 +238,9 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
-          </div>
+        <div class="col-md-9" id="oil_line">
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                待放石油/塑化趨勢圖<br> 
-              </h2>
-            </div>
-          </div>
+        <div class="col-md-3" id="oil_line_box">
         </div>
       </div>
     </div>
@@ -247,34 +250,88 @@
       <div class="row">
         <div class="col-md-12">
           <h4>請選擇股票：
-            <select id="stock_oil_name">
-              <option value="0">台塑(1301)</option>
-              <option value="1">南亞(1303)</option>
-              <option value="2">台聚(1304)</option>
-              <option value="3">華夏(1305)</option>
-              <option value="4">亞聚(1308)</option>
-              <option value="5">台達化(1309)</option>
-              <option value="6">國喬(1312)</option>
-              <option value="7">聯成(1313)</option>
-              <option value="8">中石化(1314)</option>
-              <option value="9">台化(1326)</option>
+            <select id="oil_up_stock_name">
+              <option value="1301.TW">台塑(1301)</option>
+              <option value="1303.TW">南亞(1303)</option>
+              <option value="1304.TW">台聚(1304)</option>
+              <option value="1305.TW">華夏(1305)</option>
+              <option value="1308.TW">亞聚(1308)</option>
+              <option value="1309.TW">台達化(1309)</option>
+              <option value="1312.TW">國喬(1312)</option>
+              <option value="1313.TW">聯成(1313)</option>
+              <option value="1314.TW">中石化(1314)</option>
+              <option value="1326.TW">台化(1326)</option>
             </select>
           </h4>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  <!-- end oil checked-box line chart section -->
+
+  <!-- oil bar and line interactiion chart start -->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>石油/塑化類股 RMSE值(越小越好) 與 股價預測分析圖</b>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="oil_twochartOfbar">
+        </div>
+        <div class="col-md-6" id="oil_twochartOfline">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="oil_down_stock_name">
+              <option value="1301.TW">台塑(1301)</option>
+              <option value="1303.TW">南亞(1303)</option>
+              <option value="1304.TW">台聚(1304)</option>
+              <option value="1305.TW">華夏(1305)</option>
+              <option value="1308.TW">亞聚(1308)</option>
+              <option value="1309.TW">台達化(1309)</option>
+              <option value="1312.TW">國喬(1312)</option>
+              <option value="1313.TW">聯成(1313)</option>
+              <option value="1314.TW">中石化(1314)</option>
+              <option value="1326.TW">台化(1326)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end bar and line interactiion chart -->
   <!-- end oil section -->
 
+
+  <!-- *********************************************************************************************************************** -->
+
+
   <!-- iron section -->
-  <!-- <section class="stock_title_section">
+  <!-- iron checked-box line chart section -->
+  <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h2>
-              鋼鐵/不鏽鋼類股 2021 前半年股價預測分析
-            </h2>
+            <h5>
+              <b>鋼鐵/不鏽鋼類股 2021 前半年股價預測圖</b>
+            </h5>
           </div>
         </div>
       </div>
@@ -283,19 +340,9 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
-          </div>
+        <div class="col-md-9" id="iron_line">
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                待放鋼鐵/不鏽鋼趨勢圖<br> 
-              </h2>
-            </div>
-          </div>
+        <div class="col-md-3" id="iron_line_box">
         </div>
       </div>
     </div>
@@ -305,34 +352,88 @@
       <div class="row">
         <div class="col-md-12">
           <h4>請選擇股票：
-            <select id="stock_iron_name">
-              <option value="0">中鋼(2002)</option>
-              <option value="1">東和鋼鐵(2006)</option>
-              <option value="2">春源(2010)</option>
-              <option value="3">中鴻(2014)</option>
-              <option value="4">燁輝(2023)</option>
-              <option value="5">大成鋼(2027)</option>
-              <option value="6">威致(2028)</option>
-              <option value="7">彰源(2030)</option>
-              <option value="8">新光鋼(2031)</option>
-              <option value="9">海光(2038)</option>
+            <select id="iron_up_stock_name">
+              <option value="2002.TW">中鋼(2002)</option>
+              <option value="2006.TW">東和鋼鐵(2006)</option>
+              <option value="2010.TW">春源(2010)</option>
+              <option value="2014.TW">中鴻(2014)</option>
+              <option value="2023.TW">燁輝(2023)</option>
+              <option value="2027.TW">大成鋼(2027)</option>
+              <option value="2028.TW">威致(2028)</option>
+              <option value="2030.TW">彰源(2030)</option>
+              <option value="2031.TW">新光鋼(2031)</option>
+              <option value="2038.TW">海光(2038)</option>
             </select>
           </h4>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  <!-- end iron checked-box line chart section -->
+
+  <!-- iron bar and line interactiion chart start-->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>鋼鐵/不鏽鋼類股 RMSE值(越小越好) 與 股價預測分析圖</b>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="iron_twochartOfbar">
+        </div>
+        <div class="col-md-6" id="iron_twochartOfline">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="iron_down_stock_name">
+              <option value="2002.TW">中鋼(2002)</option>
+              <option value="2006.TW">東和鋼鐵(2006)</option>
+              <option value="2010.TW">春源(2010)</option>
+              <option value="2014.TW">中鴻(2014)</option>
+              <option value="2023.TW">燁輝(2023)</option>
+              <option value="2027.TW">大成鋼(2027)</option>
+              <option value="2028.TW">威致(2028)</option>
+              <option value="2030.TW">彰源(2030)</option>
+              <option value="2031.TW">新光鋼(2031)</option>
+              <option value="2038.TW">海光(2038)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end iron bar and line interactiion chart -->
   <!-- end iron section -->
 
+
+  <!-- *********************************************************************************************************************** -->
+
+
   <!-- ship section -->
-  <!-- <section class="stock_title_section">
+  <!-- ship checked-box line chart section -->
+  <section class="stock_title_section2">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h2>
-              航運/散裝航運類股 2021 前半年股價預測分析
-            </h2>
+            <h5>
+              <b>航運/散裝航運類股 2021 前半年股價預測圖</b>
+            </h5>
           </div>
         </div>
       </div>
@@ -341,19 +442,9 @@
   <section class="about_section layout_padding2">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
-          </div>
+        <div class="col-md-9" id="ship_line">
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                待放航運/散裝航運趨勢圖<br> 
-              </h2>
-            </div>
-          </div>
+        <div class="col-md-3" id="ship_line_box">
         </div>
       </div>
     </div>
@@ -363,113 +454,170 @@
       <div class="row">
         <div class="col-md-12">
           <h4>請選擇股票：
-            <select id="stock_iron_name">
-              <option value="0">長榮(2603)</option>
-              <option value="1">新興(2605)</option>
-              <option value="2">裕民(2606)</option>
-              <option value="3">陽明(2609)</option>
-              <option value="4">萬海(2615)</option>
-              <option value="5">台航(2617)</option>
-              <option value="6">台驊投控(2636)</option>
-              <option value="7">慧洋-KY(2637)</option>
-              <option value="8">四維航(5608)</option>
-              <option value="9">中菲行(5609)</option>
+            <select id="ship_up_stock_name">
+              <option value="2603.TW">長榮(2603)</option>
+              <option value="2605.TW">新興(2605)</option>
+              <option value="2606.TW">裕民(2606)</option>
+              <option value="2609.TW">陽明(2609)</option>
+              <option value="2615.TW">萬海(2615)</option>
+              <option value="2617.TW">台航(2617)</option>
+              <option value="2636.TW">台驊投控(2636)</option>
+              <option value="2637.TW">慧洋-KY(2637)</option>
+              <option value="5608.TW">四維航(5608)</option>
+              <option value="5609.TWO">中菲行(5609)</option>
             </select>
           </h4>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  <!-- end ship checked-box line chart -->
+
+  <!-- ship bar and line interactiion chart start -->
+  <section class="stock_title_section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h5>
+              <b>航運/散裝航運類股 RMSE值(越小越好) 與 股價預測分析圖 </b>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container">
+      <div class="row" id="twochart">
+        <div class="col-md-6" id="ship_twochartOfbar">
+        </div>
+        <div class="col-md-6" id="ship_twochartOfline">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="choose_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>請選擇股票：
+            <select id="ship_down_stock_name">
+              <option value="2603.TW">長榮(2603)</option>
+              <option value="2605.TW">新興(2605)</option>
+              <option value="2606.TW">裕民(2606)</option>
+              <option value="2609.TW">陽明(2609)</option>
+              <option value="2615.TW">萬海(2615)</option>
+              <option value="2617.TW">台航(2617)</option>
+              <option value="2636.TW">台驊投控(2636)</option>
+              <option value="2637.TW">慧洋-KY(2637)</option>
+              <option value="5608.TW">四維航(5608)</option>
+              <option value="5609.TWO">中菲行(5609)</option>
+            </select>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end ship bar and line interactiion chart -->
   <!-- end ship section -->
 
-    <!-- all rmse section -->
-    <!-- <section class="stock_title_section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="heading_container">
-              <h2>
-                所有類股 RMSE 綜合比較 (RMSE越小模型越準確)
-              </h2>
-            </div>
+
+  <!-- *********************************************************************************************************************** -->
+
+
+  <!-- all rmse section -->
+  <section class="stock_title_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading_container">
+            <h2>
+              所有類股 RMSE 綜合比較 (RMSE越小模型越準確)
+            </h2>
           </div>
         </div>
       </div>
-    </section>
-    <section class="about_section layout_padding2">
-      <div class="container  ">
-        <div class="row">
-          <div class="col-md-12" id="rmsebar">
-            <script src="./js/allrmsebarinteravtive.js"></script>
-          </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding2">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-12" id="rmsebar">
+          
         </div>
       </div>
-    </section>
-    <section class="choose_section">
-      <div class="container rmsefivekind">
-        <div class="row">
-          <div class="col-md-1">
-            <h4 style="font-weight: bold;">
-              LSTM:
-            </h4>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="LSTM_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="LSTM_F5_TI189">F5_TI189</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="LSTM_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="LSTM_F5_XGBTI15">F5_XGBTI15</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="LSTM_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="LSTM_F5_Futures">F5_Futures</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="LSTM_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="LSTM_F5_Category">F5_Category</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="LSTM_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="LSTM_F5_Nothing">F5_Nothing</label>
-          </div>
-          <div class="col-md-1">
-          </div>
+    </div>
+  </section>
+  <section class="choose_section"  style="padding: 10px 0 50px 0;">
+    <div class="container rmsefivekind">
+      <div class="row">
+        <div class="col-md-1">
+          <h4 style="font-weight: bold;">
+            LSTM:
+          </h4>
         </div>
-        <div class="row">
-          <div class="col-md-1">
-            <h4 style="font-weight: bold;">
-              GRU:
-            </h4>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="GRU_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="GRU_F5_TI189">F5_TI189</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="GRU_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="GRU_F5_XGBTI15">F5_XGBTI15</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="GRU_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="GRU_F5_Futures">F5_Futures</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="GRU_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="GRU_F5_Category">F5_Category</label>
-          </div>
-          <div class="col-md-2" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="GRU_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
-            <label for="GRU_F5_Nothing">F5_Nothing</label>
-          </div>
-          <div class="col-md-1" style="font-size: larger; font-weight: bold;">
-            <input type="checkbox" id="checkall" style="width:16px; height:16px;">
-            <label for="checkall">ALL</label>
-          </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="LSTM_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="LSTM_F5_TI189">F5_TI189</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="LSTM_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="LSTM_F5_XGBTI15">F5_XGBTI15</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="LSTM_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="LSTM_F5_Futures">F5_Futures</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="LSTM_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="LSTM_F5_Category">F5_Category</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="LSTM_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="LSTM_F5_Nothing">F5_Nothing</label>
+        </div>
+        <div class="col-md-1">
         </div>
       </div>
-    </section> -->
-    <!-- end all rmse section -->
+      <div class="row">
+        <div class="col-md-1">
+          <h4 style="font-weight: bold;">
+            GRU:
+          </h4>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="GRU_F5_TI189" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="GRU_F5_TI189">F5_TI189</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="GRU_F5_XGBTI15" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="GRU_F5_XGBTI15">F5_XGBTI15</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="GRU_F5_Futures" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="GRU_F5_Futures">F5_Futures</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="GRU_F5_Category" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="GRU_F5_Category">F5_Category</label>
+        </div>
+        <div class="col-md-2" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="GRU_F5_Nothing" class="fivekind" style="width:16px; height:16px;" name="modelf">
+          <label for="GRU_F5_Nothing">F5_Nothing</label>
+        </div>
+        <div class="col-md-1" style="font-size: larger; font-weight: bold;">
+          <input type="checkbox" id="checkall" style="width:16px; height:16px;">
+          <label for="checkall">ALL</label>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end all rmse section -->
+
+
+  <!-- *********************************************************************************************************************** -->
+
 
   <!-- footer section -->
   <footer class="footer_section">
@@ -498,6 +646,14 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
 
+  <!-- oil page plot -->
+  <script src="./js/oil_page.js"></script>
+  <!-- iron page plot -->
+  <script src="./js/iron_page.js"></script>
+  <!-- ship page plot -->
+  <script src="./js/ship_page.js"></script>
+  <!-- result page plot -->
+  <script src="./js/result_page.js"></script>
 
 </body>
 
