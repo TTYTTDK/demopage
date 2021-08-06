@@ -113,10 +113,11 @@ a:focus {
   padding-left: 25px;
 }
 
+
 .navbar-brand span {
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 24px;
+  font-weight:bold;
+  font-size: 26px;
   color: #000000;
 }
 
@@ -133,18 +134,20 @@ a:focus {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 20px;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  color: #fac430;
+  color: #F29602;
 }
 
 .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  font-weight: 600;
+  font-weight:bolder;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -352,7 +355,8 @@ a:focus {
 }
 
 .stock_title_section2 {
-  padding: 5px 0 5px 0;
+  padding: 20px 0 20px 0;
+  font-size: 24px;
 }
 
 /* button style */
@@ -364,6 +368,8 @@ a:focus {
 /* choose section */
 .choose_section {
   padding: 30px 0 300px 0;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 
@@ -384,3 +390,25 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* to the top */
+#gotop {
+  position:fixed;
+  z-index:90;
+  right:30px;
+  bottom:31px;
+  display:none;
+  width:50px;
+  height:50px;
+  color:#fff;
+  background:#000000;
+  line-height:50px;
+  border-radius:80%;
+  transition:all 0.5s;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+#gotop :hover{
+  background:#000000;
+}

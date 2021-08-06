@@ -44,8 +44,8 @@
   <div class="hero_area">
 
     <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
+    <header class="header_section" style="background-color: #FFF9EB;">
+      <div class="container" >
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
@@ -86,6 +86,11 @@
 
 
 <!-- *********************************************************************************************************************** -->
+
+  <!-- to the top -->
+  <a href="index.html" id="gotop">
+    <i class="fa fa-angle-up"></i>
+  </a>
 
 
     <!-- slider section -->
@@ -184,12 +189,12 @@
   <section class="about_section layout_padding"  style="padding: 50px 0 300px 0;">
     <div class="container  ">
       <div class="row">
-        <div class="col-md-6 ">
+        <div class="col-md-5 ">
           <div class="img-box col-lg-10 mx-auto px-0">
-            <img src="images/about-img.png" alt="">
+            <img src="images/pytorch_lstm_gru.png" alt="">
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="detail-box">
             <div class="heading_container">
               <h2>
@@ -197,16 +202,16 @@
                 LSTM & GRU 模型來預測股價
               </h2>
             </div>
-              <h5>
-                利用近 10 年每日開盤價、收盤價、最低價、最高價、成交量 5 種特徵值搭配其他特徵值來預測 2021 前半年股價，搭配的其他特徵值如下 5 種搭配方式：
-              </h5>
+              <p style="font-size: 24px;">
+                利用近 10 年每日開盤價、收盤價、最低價、最高價、成交量 5 種特徵值，搭配其他特徵值來預測 2021 前半年股價，搭配的其他特徵值如下 5 種搭配方式：
+              </p>
             <div>
-              <ul style="font-size: 18px;">
-                <li>F5_TI189：基本開收低高量 + 技術指標189個</li>
-                <li>F5_XGBTI15：基本開收低高量 + XGBoost篩選技術指標前15名</li>
-                <li>F5_Futures：基本開收低高量 + 各類股對應的期貨報價</li>
-                <li>F5_Category：基本開收低高量 + 各類股的收盤價</li>
-                <li>F5_Nothing：基本開收低高量</li>
+              <ul style="font-size: 22px;">
+                <li>F5+TI189：基本開收低高量 + 技術指標189個</li>
+                <li>F5+XGBTI15：基本開收低高量 + XGBoost篩選技術指標前15名</li>
+                <li>F5+Futures：基本開收低高量 + 各類股對應的期貨報價</li>
+                <li>F5+Category：基本開收低高量 + 各類股的收盤價</li>
+                <li>F5+Nothing：基本開收低高量</li>
               </ul>
             </div>
           </div>
@@ -227,9 +232,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>石油/塑化類股 2021 前半年股價預測圖</b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -249,7 +254,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="oil_up_stock_name">
               <option value="1301.TW">台塑(1301)</option>
               <option value="1303.TW">南亞(1303)</option>
@@ -262,7 +267,7 @@
               <option value="1314.TW">中石化(1314)</option>
               <option value="1326.TW">台化(1326)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -275,9 +280,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>石油/塑化類股 RMSE值(越小越好) 與 股價預測分析圖</b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -297,7 +302,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="oil_down_stock_name">
               <option value="1301.TW">台塑(1301)</option>
               <option value="1303.TW">南亞(1303)</option>
@@ -310,7 +315,7 @@
               <option value="1314.TW">中石化(1314)</option>
               <option value="1326.TW">台化(1326)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -329,9 +334,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>鋼鐵/不鏽鋼類股 2021 前半年股價預測圖</b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -351,7 +356,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="iron_up_stock_name">
               <option value="2002.TW">中鋼(2002)</option>
               <option value="2006.TW">東和鋼鐵(2006)</option>
@@ -364,7 +369,7 @@
               <option value="2031.TW">新光鋼(2031)</option>
               <option value="2038.TW">海光(2038)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -377,9 +382,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>鋼鐵/不鏽鋼類股 RMSE值(越小越好) 與 股價預測分析圖</b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -399,7 +404,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="iron_down_stock_name">
               <option value="2002.TW">中鋼(2002)</option>
               <option value="2006.TW">東和鋼鐵(2006)</option>
@@ -412,7 +417,7 @@
               <option value="2031.TW">新光鋼(2031)</option>
               <option value="2038.TW">海光(2038)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -431,9 +436,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>航運/散裝航運類股 2021 前半年股價預測圖</b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -453,7 +458,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="ship_up_stock_name">
               <option value="2603.TW">長榮(2603)</option>
               <option value="2605.TW">新興(2605)</option>
@@ -466,7 +471,7 @@
               <option value="5608.TW">四維航(5608)</option>
               <option value="5609.TWO">中菲行(5609)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -479,9 +484,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h5>
+            <p>
               <b>航運/散裝航運類股 RMSE值(越小越好) 與 股價預測分析圖 </b>
-            </h5>
+            </p>
           </div>
         </div>
       </div>
@@ -501,7 +506,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h4>請選擇股票：
+          <p>請選擇股票：
             <select id="ship_down_stock_name">
               <option value="2603.TW">長榮(2603)</option>
               <option value="2605.TW">新興(2605)</option>
@@ -514,7 +519,7 @@
               <option value="5608.TW">四維航(5608)</option>
               <option value="5609.TWO">中菲行(5609)</option>
             </select>
-          </h4>
+          </p>
         </div>
       </div>
     </div>
@@ -527,14 +532,14 @@
 
 
   <!-- all rmse section -->
-  <section class="stock_title_section">
+  <section class="stock_title_section2" style="font-weight: bold;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heading_container">
-            <h2>
+            <p>
               所有類股 RMSE 綜合比較 (RMSE越小模型越準確)
-            </h2>
+            </p>
           </div>
         </div>
       </div>
@@ -549,7 +554,7 @@
       </div>
     </div>
   </section>
-  <section class="choose_section"  style="padding: 10px 0 50px 0;">
+  <section class="choose_section2" style="padding: 10px 0 50px 0;">
     <div class="container rmsefivekind">
       <div class="row">
         <div class="col-md-1">
