@@ -412,3 +412,14 @@ a:focus {
 #gotop :hover{
   background:#000000;
 }
+
+.totoptext{
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.totoptext:hover{
+  font-size: 18px;
+  color: #F29602;
+}

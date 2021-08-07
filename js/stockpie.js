@@ -16,8 +16,8 @@ var svg = d3.select("#oilpiefig") //create Svg element
             .append("svg")
             .attr("preserveAspectRatio", "xMidYMid meet")
             .attr("viewBox", "0 0 400 400")
-            // .attr('width', width + margin.right + margin.left)
-            // .attr('height', height + margin.top + margin.bottom)
+            .attr('width', width + margin.right + margin.left)
+            .attr('height', height + margin.top + margin.bottom)
             // .attr("transform","translate(50,0)");   
 
 var chart=svg.append('g')
@@ -36,6 +36,22 @@ let arc=d3.arc()
             .outerRadius(200)
             .innerRadius(100)
 
+
+
+const tooltip = d3.select("#oilpiefig")
+                  .append('div')
+                  .attr('class', 'd3-tooltip')
+                  .style('position', 'absolute')
+                  .style('z-index', '1000')
+                  .style('visibility', 'hidden')
+                  .style('padding', '10px')
+                  .style('background', 'rgba(0,0,0,0.6)')
+                  .style('border-radius', '4px')
+                  .style('color', '#fff')
+                  .text('a simple tooltip');
+
+
+
 var p_chart=chart.selectAll("pie")
                   .data(pie(data))
                   .enter()
@@ -43,11 +59,36 @@ var p_chart=chart.selectAll("pie")
                   .attr('transform', 'translate(200,200)') 
 
 p_chart.append("path")
-         .attr("d",arc) 
+         .attr("d",arc)
+         .on('mouseover', function (e, d, i) {
+            
+            tooltip.html(
+               `<div>Language: ${d.data.language}</div><div>Value: ${d.value}</div>`
+            )
+            .style('visibility', 'visible');
+         })
+         .on('mousemove', function (e) {
+            
+
+            tooltip.style('top', e.pageY - 200 + 'px')
+                     .style('left', e.pageX - 800 + 'px');
+         })
+         .on('mouseout', function () {
+
+            tooltip.html(``).style('visibility', 'hidden');
+         })
          .attr("fill",d=>{
             return color_scale(d.data.language);
-         }) 
+         })
+         
+   
 
+
+
+
+
+
+         
 // p_chart.append("text")
 //       .text(function(d){ return d.data.language})
 //       .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")";  }) 
