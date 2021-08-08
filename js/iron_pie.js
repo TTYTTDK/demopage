@@ -63,7 +63,7 @@ d3.csv(`data/Pie_Chart/iron_adj.csv`).then( function(data) {
             .on('mouseover', function (e, d, i) {
                
                tooltip.html(
-                  `<div>Stock: ${d.data.stockname}</div><div>Value: ${d.value}</div>`
+                  `<div>Stock: ${d.data.stockname}</div><div>Value: ${round2(d.value)} %</div>`
                )
                .style('visibility', 'visible');
             })
