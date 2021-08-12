@@ -376,7 +376,7 @@ function towChartInteraction(downValue) {
             .attr("width", x1.bandwidth())
             .attr("height", d => height - y1(d.rmsevalue))
             .attr("id", d => `iron-bar-${d.model}`)  
-            .attr("fill", "#bf4342")
+            .attr("fill", "#ae1e22")
             .style("opacity", 0.2)
             .on("mouseover", function (e, d, i){
             //  bar itself
@@ -549,7 +549,7 @@ function towChartInteraction(downValue) {
             .attr("class", "line")
             .attr("id", d =>`iron-line2chart-${d.id}`)
             .attr("d", d => line(d.values))
-            .style("stroke", (d,i) => i==0 ? d='#000000' : d="#bf4342")
+            .style("stroke", (d,i) => i==0 ? d='#000000' : d="#ae1e22")
             .style("fill", "none")
             .style("stroke-width", "3px")
             .style("stroke-linejoin", "round")

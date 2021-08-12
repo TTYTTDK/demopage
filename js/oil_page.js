@@ -376,7 +376,7 @@ function towChartInteraction(downValue) {
             .attr("width", x1.bandwidth())
             .attr("height", d => height - y1(d.rmsevalue))
             .attr("id", d => `oil-bar-${d.model}`)  
-            .attr("fill", "#0a9396")
+            .attr("fill", "#49622d")
             .style("opacity", 0.2)
             .on("mouseover", function (e, d, i){
             //  bar itself
@@ -549,7 +549,7 @@ function towChartInteraction(downValue) {
             .attr("class", "line")
             .attr("id", d =>`oil-line2chart-${d.id}`)
             .attr("d", d => line(d.values))
-            .style("stroke", (d,i) => i==0 ? d='#000000' : d="#0a9396")
+            .style("stroke", (d,i) => i==0 ? d='#000000' : d="#49622d")
             .style("fill", "none")
             .style("stroke-width", "3px")
             .style("stroke-linejoin", "round")

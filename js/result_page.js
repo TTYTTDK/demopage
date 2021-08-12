@@ -33,7 +33,7 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
   let ardata = []
   for(let i = 0; i < data.length; i++) {
 
-    // console.log(round2(data[i].LSTM_F5_TI189))
+    // console.log(data[i].GRU_F5_TI189)
 
     ardata.push({
       "name": data[i].name,
@@ -45,6 +45,7 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
   }
 
   // console.log(ardata)
+
 
   let ids = ["LSTM_F5_TI189", "LSTM_F5_XGBTI15", "LSTM_F5_Futures",
               "LSTM_F5_Category", "LSTM_F5_Nothing", 

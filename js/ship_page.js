@@ -376,7 +376,7 @@ function towChartInteraction(downValue) {
             .attr("width", x1.bandwidth())
             .attr("height", d => height - y1(d.rmsevalue))
             .attr("id", d => `ship-bar-${d.model}`)  
-            .attr("fill", "steelblue")
+            .attr("fill", "#004fa3")
             .style("opacity", 0.2)
             .on("mouseover", function (e, d, i){
             //  bar itself
@@ -549,7 +549,7 @@ function towChartInteraction(downValue) {
             .attr("class", "line")
             .attr("id", d =>`ship-line2chart-${d.id}`)
             .attr("d", d => line(d.values))
-            .style("stroke", (d,i) => i==0 ? d='#000000' : d="steelblue")
+            .style("stroke", (d,i) => i==0 ? d='#000000' : d="#004fa3")
             .style("fill", "none")
             .style("stroke-width", "3px")
             .style("stroke-linejoin", "round")
