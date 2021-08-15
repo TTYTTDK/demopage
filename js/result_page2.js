@@ -90,38 +90,44 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
     }
     updateGraph(ids);
   });
-  renderGraph();
-
-// for all checkbox
-  d3.select('.rmsefivekind').selectAll('#checkall').on('change', function() {
-
-    let allcheck = document.querySelectorAll('#checkall:checked')   
-    let ids = []
-
-    if (allcheck.length == 1) {
-      ids = ["LSTM_F5_TI189", "LSTM_F5_XGBTI15", "LSTM_F5_Futures",
-              "LSTM_F5_Category", "LSTM_F5_Nothing", 
-              "GRU_F5_TI189", "GRU_F5_XGBTI15", "GRU_F5_Futures", 
-              "GRU_F5_Category", "GRU_F5_Nothing"]
-    }  
-    updateGraph(ids);
-  });
-  renderGraph();
+  let allids = ["LSTM_F5_TI189", "LSTM_F5_XGBTI15", "LSTM_F5_Futures",
+                "LSTM_F5_Category", "LSTM_F5_Nothing", 
+                "GRU_F5_TI189", "GRU_F5_XGBTI15", "GRU_F5_Futures", 
+                "GRU_F5_Category", "GRU_F5_Nothing"]
+  renderGraph(allids);
 
 // function definition
-  function renderGraph() {
+  function renderGraph(allids) {
 
-    y.domain([0, 0]);
-    x0.domain(ardata.map(d => d.name));
-    x1.domain(checkboxes).range([0, x0.bandwidth()]);
-  
+    let rmsedata = ardata.map(function(rmsedata){
+      return {
+        name: rmsedata.name,
+        checkbox: allids.map(function(selectedId) {
+          let index = ids.findIndex(function(id) {
+            return selectedId === id;
+          });
+          return {
+            id : ids[index],
+            other: checkboxes[index],
+            value: rmsedata.rmse[index]
+          };
+        })
+      }
+    });
+
+    // console.log(rmsedata)
+    
+    y.domain([0, d3.max(rmsedata, d => d3.max(d.checkbox, d => +d.value ))]).nice();
+    x0.domain(rmsedata.map(d => d.name)).padding([0.07]);
+    x1.domain(allids).range([0, x0.bandwidth()]);
+
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", `translate(0, ${height})`)
         .call(xAxis)
         .selectAll("text")
         .style("font-size","16px")
-        .style("font-weight", "bold")
+        .style("font-weight", "bolder")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
 
@@ -139,6 +145,41 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
         .attr("dy", "1.5em")
         .attr("fill", "#000")
         .text("RMSE");  
+
+    let name = svg.append("g")
+                  .selectAll(".name")
+                  .data(rmsedata)
+                  .join("g")
+                  .attr("class", "name")
+                  .attr("transform", d => `translate(${x0(d.name)}, 0)`);
+
+    let rmse = name.selectAll("rect")
+            .data(d => d.checkbox);
+
+    rmse.join("rect")
+        // .attr('width', 0)
+        .attr("y", d => y(d.value))
+        .attr("x", d => x1(d.id))
+        .attr("id", d => d.id)
+        .style("fill", d => color(d.other))
+        .attr("width", d => x1.bandwidth())
+        .attr("height", d => height - y(d.value))
+        .on('mouseover', function (e, d, i) {
+          tooltip
+            .html(
+              `<div>Model: ${d.id}</div><div>Value: ${d.value}</div>`
+            )
+            .style('visibility', 'visible');
+        })
+        .on('mousemove', function (e) {
+          tooltip
+
+            .style('top', e.clientY - 200 + 'px')
+            .style('left', e.clientX - 300  + 'px');
+        })
+        .on('mouseout', function (e) {
+          tooltip.html(``).style('visibility', 'hidden');
+        })
   }
 
   function updateGraph(selectedIds) {
@@ -159,7 +200,7 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
       }
     });
 
-    console.log(rmsedata)
+    // console.log(rmsedata)
     
     y.domain([0, d3.max(rmsedata, d => d3.max(d.checkbox, d => +d.value ))]).nice();
     x0.domain(rmsedata.map(d => d.name)).padding([0.07]);
@@ -170,7 +211,7 @@ d3.csv("data/All_RMSE_Data/All_Metrics_Score_rmse_flat_table.csv").then( functio
     svg.selectAll('.axis.y')
         .call(yAxis)
         .style("font-size","16px")
-        .style("font-weight", "bold")
+        .style("font-weight", "bolder")
         .append("g")
         .append("text")
         .attr("transform", "rotate(-270)")
